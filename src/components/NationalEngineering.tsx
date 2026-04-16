@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Building2, Wind, Plane, CloudRain, Telescope, FlaskConical, MonitorPlay, Layers, ArrowLeft, Cloud, Rocket, Radar, Factory, Database, UploadCloud, X } from 'lucide-react';
+import imgFangbao from '../assets/images/fangbao.png';
 
 export function NationalEngineeringPanel({ activeTab, setActiveTab }: { activeTab: number | null, setActiveTab: (tab: number | null) => void }) {
   return (
@@ -442,9 +443,10 @@ export function NationalEngineeringDetail({ activeTab, setActiveTab, onClose }: 
                 <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-cyan-300 opacity-50 group-hover:opacity-100 transition-opacity"></div>
                 
                 <img 
-                  src="/images/fangbao.png" 
+                  src={imgFangbao} 
                   alt="贵州威宁防雹基地冰雹联防外场试验" 
                   className="w-full h-auto max-h-full object-contain rounded shadow-sm opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>

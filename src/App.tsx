@@ -19,6 +19,11 @@ import { OperationEffectTable } from './components/OperationEffectTable';
 import { ThreeYearActionModal } from './components/ThreeYearActionModal';
 import { CommandLayoutMapPanel } from './components/CommandLayoutMapPanel';
 
+// Import local images
+import imgNetwork from './assets/images/0001.jpg';
+import imgCommand from './assets/images/0002.jpg';
+import imgEffect from './assets/images/0003.png';
+
 const responsibilities = [
   "拟定发展规划与标准规范",
   "业务指导与技术支持",
@@ -680,9 +685,9 @@ function WeatherModPrinciplesPanel() {
             <p><b className="text-cyan-400 text-lg">定义：</b>人工影响天气是指为避免或减轻气象灾害，在适当条件下通过科技手段对局部大气的物理、化学过程进行人工控制，实现增雨雪、防雹、消雨、消雾、防霜等目的。</p>
             <p><b className="text-cyan-400 text-lg">科学逻辑：</b>基于大气水循环理论，当自然循环带来的降水不能满足陆地需求时，通过人工干预增加或减少局部降水。</p>
           </div>
-          <div className="w-full flex-1 min-h-[200px] bg-cyan-300/10 border border-dashed border-cyan-500/50 rounded-lg flex flex-col items-center justify-center text-cyan-400 mt-4">
-            <span className="text-4xl mb-2">🖼️</span>
-            <span>【图示：毛主席视察照片 / 全球水循环示意图】</span>
+          <div className="w-full flex-1 min-h-[200px] bg-cyan-300/10 border border-dashed border-cyan-500/50 rounded-lg flex flex-col items-center justify-center text-cyan-400 mt-4 overflow-hidden relative">
+            <img src="https://picsum.photos/seed/water-cycle/800/600" alt="全球水循环示意图" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" referrerPolicy="no-referrer" />
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-xs text-white backdrop-blur-sm">全球水循环示意图</div>
           </div>
         </div>
       )
@@ -706,9 +711,9 @@ function WeatherModPrinciplesPanel() {
                 <div className="flex-1 h-px bg-gradient-to-r from-cyan-500/50 to-transparent ml-4"></div>
               </div>
               <div className="text-slate-200 text-sm leading-relaxed mb-4">{item.desc}</div>
-              <div className="w-full h-32 bg-cyan-900/20 border border-dashed border-cyan-500/30 rounded flex flex-col items-center justify-center text-cyan-500/70 text-sm">
-                <span className="text-2xl mb-1">🖼️</span>
-                <span>{item.img}</span>
+              <div className="w-full h-32 bg-cyan-900/20 border border-dashed border-cyan-500/30 rounded flex flex-col items-center justify-center text-cyan-500/70 text-sm overflow-hidden relative">
+                <img src={`https://picsum.photos/seed/mechanism-${idx}/600/400`} alt={item.title} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" referrerPolicy="no-referrer" />
+                <div className="absolute bottom-1 left-1/2 -translate-x-1/2 bg-black/60 px-2 py-0.5 rounded text-[10px] text-white backdrop-blur-sm whitespace-nowrap">{item.img.replace(/【|】/g, '')}</div>
               </div>
             </div>
           ))}
@@ -725,9 +730,9 @@ function WeatherModPrinciplesPanel() {
             <p><b className="text-cyan-400 text-lg">地面作业：</b>利用<b className="text-cyan-300">火箭架、高炮、地面碘化银烟炉</b>。火箭与高炮用于强对流云快速拦截，烟炉则常布设于山坡，利用上升气流将催化剂送入云层。</p>
             <p><b className="text-cyan-400 text-lg">空中作业：</b>利用<b className="text-cyan-300">高性能飞机（新舟60、空中国王、翼龙无人机等）</b>挂载碘化银发生器、液氮或干冰撒播装置，实现大面积、精准催化。</p>
           </div>
-          <div className="w-full flex-1 min-h-[200px] bg-cyan-900/20 border border-dashed border-cyan-500/50 rounded-lg flex flex-col items-center justify-center text-cyan-400 mt-4">
-            <span className="text-4xl mb-2">🖼️</span>
-            <span>【图示：立体化作业装备全景照片】</span>
+          <div className="w-full flex-1 min-h-[200px] bg-cyan-900/20 border border-dashed border-cyan-500/50 rounded-lg flex flex-col items-center justify-center text-cyan-400 mt-4 overflow-hidden relative">
+            <img src="https://picsum.photos/seed/equipment-all/800/600" alt="立体化作业装备全景" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" referrerPolicy="no-referrer" />
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-xs text-white backdrop-blur-sm">立体化作业装备全景</div>
           </div>
         </div>
       )
@@ -742,9 +747,9 @@ function WeatherModPrinciplesPanel() {
             <p><b className="text-cyan-400 text-lg">法律基石：</b>依据《中华人民共和国气象法》及《人工影响天气管理条例》开展业务。</p>
             <p><b className="text-cyan-400 text-lg">协作体系：</b>建立部际联席会议制度，由<b className="text-cyan-300">中国气象局牵头、包含发改委、财政部、军委联参等22个成员单位</b>协作。形成“国家-省-市-县”四级联动业务链。</p>
           </div>
-          <div className="w-full flex-1 min-h-[200px] bg-cyan-900/20 border border-dashed border-cyan-500/50 rounded-lg flex flex-col items-center justify-center text-cyan-400 mt-4">
-            <span className="text-4xl mb-2">🖼️</span>
-            <span>【图示：22个部委协作架构图】</span>
+          <div className="w-full flex-1 min-h-[200px] bg-cyan-900/20 border border-dashed border-cyan-500/50 rounded-lg flex flex-col items-center justify-center text-cyan-400 mt-4 overflow-hidden relative">
+            <img src="https://picsum.photos/seed/collaboration/800/600" alt="22个部委协作架构" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" referrerPolicy="no-referrer" />
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-xs text-white backdrop-blur-sm">22个部委协作架构图</div>
           </div>
         </div>
       )
@@ -759,9 +764,9 @@ function WeatherModPrinciplesPanel() {
             <p><b className="text-cyan-400 text-lg">历程：</b>自1958年吉林省首次飞机增雨起步，历经初创与跨越。目前增雨作业影响面积已达<b className="text-cyan-300">583.6万平方公里</b>，防雹保护面积<b className="text-cyan-300">59.8万平方公里</b>。</p>
             <p><b className="text-cyan-400 text-lg">装备：</b>全国拥有人影飞机55架（含10架国家级高性能增雨飞机），高炮4306门，火箭7631部，地面作业站点1.5万个，作业人员3.4万名。</p>
           </div>
-          <div className="w-full flex-1 min-h-[200px] bg-cyan-900/20 border border-dashed border-cyan-500/50 rounded-lg flex flex-col items-center justify-center text-cyan-400 mt-4">
-            <span className="text-4xl mb-2">🖼️</span>
-            <span>【图示：全国作业覆盖热力图与飞机阵列】</span>
+          <div className="w-full flex-1 min-h-[200px] bg-cyan-900/20 border border-dashed border-cyan-500/50 rounded-lg flex flex-col items-center justify-center text-cyan-400 mt-4 overflow-hidden relative">
+            <img src="https://picsum.photos/seed/china-map-heat/800/600" alt="全国作业覆盖热力图" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" referrerPolicy="no-referrer" />
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded text-xs text-white backdrop-blur-sm">全国作业覆盖热力图与飞机阵列</div>
           </div>
         </div>
       )
@@ -1051,11 +1056,11 @@ function CenterMapSection({
           <div className="absolute inset-0 flex items-center justify-center p-4">
             <div className="w-full h-full glass-card border-white/5 shadow-inner overflow-hidden bg-slate-900/50">
               {centerMapTab === 'network' ? (
-                <img src="/images/0001.jpg" alt="作业力量一张网" className="w-full h-full object-cover" />
+                <img src={imgNetwork} alt="作业力量一张网" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               ) : centerMapTab === 'command' ? (
-                <img src="/images/0002.jpg" alt="指挥调度一张图" className="w-full h-full object-cover" />
+                <img src={imgCommand} alt="指挥调度一张图" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               ) : (
-                <img src="/images/0003.png" alt="作业效果一张表" className="w-full h-full object-cover" />
+                <img src={imgEffect} alt="作业效果一张表" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               )}
             </div>
           </div>
